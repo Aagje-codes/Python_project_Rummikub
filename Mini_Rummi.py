@@ -1,7 +1,3 @@
-# Notes for next time:
-# 
-
-
 # This is a mini version of Rummikub just to see if I can make it work.
 # This is the version using the class player.
 #
@@ -30,7 +26,7 @@ computer = Player("computer")
 
 	
 
-tiles = range(1,19)		# Creates a set of 18 tiles ranging from 1 to 18, including 18.
+tiles = range(1,30)		# Creates a set of 18 tiles ranging from 1 to 18, including 18.
 board = []				# This is the playing field on which the tiles are placed.
 to_add = []        		# Has to be a global variable.
 turn = ()				# also has to be a global variable
