@@ -3,7 +3,7 @@
 #
 # Here's the rules:
 # The computer is playing itself. 
-# Each player starts with 4 tiles on their shelf and the first player to use all the tiles
+# Each player starts with 8 tiles on their shelf and the first player to use all the tiles
 # on their shelf and thereby emptying the shelf, wins.
 # In the game there are three options:
 # 1. If you can't make a move, you can take a tile
@@ -210,10 +210,10 @@ def play(shelf, tiles, board):
 		elif not tiles and counter>2:
 			print "Game over!"
 			print "No more tiles available."	
-			if sum(player_1.shelf) < sum(shelf_2):
+			if sum(player_1.shelf) < sum(computer.shelf):
 				print "Player 1 wins!"
 				exit()
-			elif sum(player_1.shelf) == sum(shelf_2):
+			elif sum(player_1.shelf) == sum(computer.shelf):
 				print "It's a tie!"
 				exit()
 			else:
@@ -221,7 +221,7 @@ def play(shelf, tiles, board):
 				exit()		
 		else:
 			turn = 2
-			play(shelf_2, tiles, board)
+			play(computer.shelf, tiles, board)
 			
 	while shelf and turn == 2:
 		print "\nComputer makes a move:"
@@ -229,13 +229,13 @@ def play(shelf, tiles, board):
 		print "Tiles on the board:", board
 		print "Tiles on the shelf", shelf
 		move_made = []
-		add_set(board, shelf_2)
-		add_one(board, shelf_2)
-		add_one(board, shelf_2)        # You have to check if there are sets of 2 on your shelf that could both be added.
+		add_set(board, computer.shelf)
+		add_one(board, computer.shelf)
+		add_one(board, computer.shelf)        # You have to check if there are sets of 2 on your shelf that could both be added.
 		
 		if not move_made and tiles:
 			print "Computer can't make a move. Takes a tile."
-			take_one(tiles, shelf_2)
+			take_one(tiles, computer.shelf)
 		else:
 			print "Tiles on the board:", board
 			print "Tiles left on the shelf", shelf
@@ -253,10 +253,10 @@ def play(shelf, tiles, board):
 		elif not tiles and counter>2:			
 			print "Game over!"
 			print "No more tiles available."	
-			if sum(player_1.shelf) < sum(shelf_2):
+			if sum(player_1.shelf) < sum(computer.shelf):
 				print "Player 1 wins!"
 				exit()
-			elif sum(player_1.shelf) == sum(shelf_2):
+			elif sum(player_1.shelf) == sum(computer.shelf):
 				print "It's a tie!"
 				exit()
 			else:
@@ -272,16 +272,16 @@ def start_game():
 	global turn 
 	global shelf_2
 	
-	player_1.shelf = [0] * 4        #Let's us start with 4 starting positions.
-	shelf_2 = [0] * 4
+	player_1.shelf = [0] * 8        #Let's us start with 4 starting positions.
+	computer.shelf = [0] * 8
 	
 	print "Player 1 picks tiles:"
 	pick_tiles(tiles, player_1.shelf) 
 	
 	print "Computer picks tiles:"
-	pick_tiles(tiles, shelf_2)
+	pick_tiles(tiles, computer.shelf)
 	
-	first_to_play(player_1.shelf, shelf_2, tiles, board)
+	first_to_play(player_1.shelf, computer.shelf, tiles, board)
 	
 	
 start_game()
