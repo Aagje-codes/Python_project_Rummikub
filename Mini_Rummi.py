@@ -269,7 +269,6 @@ def play(shelf, tiles, board):
 
 def start_game():
 	global turn 
-	global shelf_2
 	
 	player_1.shelf = [0] * 8        #Let's us start with 4 starting positions.
 	computer.shelf = [0] * 8
