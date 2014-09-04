@@ -59,6 +59,7 @@ Where I'm at:
   3. I'm currently working with a double set ranging 1 to 9 - no colours.
   4. And it works, it prints out a game rapport as the game progresses until there is a winner.
 
+All this is documented in the file Mini_Rummi
 
 
 
