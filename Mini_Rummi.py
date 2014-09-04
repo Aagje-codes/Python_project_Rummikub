@@ -30,7 +30,6 @@ tiles = range(1,30)		# Creates a set of 18 tiles ranging from 1 to 18, including
 board = []				# This is the playing field on which the tiles are placed.
 to_add = []        		# Has to be a global variable.
 turn = ()				# also has to be a global variable
-shelf_2 = []
 move_made = []
 
 random.shuffle(tiles)	# This shuffles up the tiles so we can begin playing.	
