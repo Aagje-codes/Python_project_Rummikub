@@ -56,6 +56,8 @@ After you first move, you are not restricted by a minimum of points to play.
 Where I'm at:
 1. I have not figured out a good way to create a set with tiles that have both the atribute colour and the atribute number.
 2. I only have a 2 player game where the computer plays itself.
-3. I'm currently working with a set of 
+3. I'm currently working with a double set ranging 1 to 9 - no colours.
+4. And it works, it prints out a game rapport as the game progresses until there is a winner.
+
 
 
