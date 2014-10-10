@@ -1,7 +1,7 @@
 Python_project_Rummikub
 =======================
 
-This is a learning project in Python to make my own digital version of Rummikub.
+This is a learning project in Python (version 2.7) to make my own digital version of Rummikub.
 
 Started learning to code in Python and gave myself a few summer project to work on.
 As this project advances, more complicated things arrise and this project will probably continue for a bit longer.
